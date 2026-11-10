@@ -1,0 +1,298 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+  color: #26334a;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 245px;
+  min-height: 100vh;
+  background: #202b46;
+  color: white;
+  padding: 30px 20px;
+  flex-shrink: 0;
+}
+
+.sidebar h3 {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.sidebar-subtitle {
+  font-size: 11px;
+  color: #aab4cc;
+  margin-bottom: 35px;
+  letter-spacing: 1px;
+}
+
+.sidebar a {
+  display: block;
+  color: #cbd3e4;
+  text-decoration: none;
+  padding: 13px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.sidebar a i {
+  margin-right: 9px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: #405581;
+  color: white;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 1;
+  min-width: 0;
+  padding: 25px;
+}
+
+/* NAVBAR */
+.navbar-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.navbar-custom h4 {
+  font-weight: bold;
+}
+
+.navbar-custom p {
+  color: #777;
+  margin: 0;
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-actions input {
+  width: 220px;
+}
+
+/* WELCOME */
+.welcome-banner {
+  background: linear-gradient(120deg, #3156c9, #697de0);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.welcome-banner h3 {
+  font-weight: bold;
+}
+
+.welcome-banner p {
+  margin-bottom: 0;
+}
+
+/* STATISTICS */
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.stat-card p {
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.stat-card h2 {
+  font-weight: bold;
+  color: #405de6;
+  margin-bottom: 5px;
+}
+
+.stat-card small {
+  color: #999;
+}
+
+/* CONTENT */
+.content-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+  scroll-margin-top: 20px;
+}
+
+.content-card h4 {
+  font-weight: bold;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.section-heading p {
+  margin-bottom: 0;
+}
+
+/* TABLE */
+.table {
+  min-width: 750px;
+}
+
+.table thead th {
+  background: #f3f5fa;
+  color: #47536a;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.table td {
+  font-size: 13px;
+}
+
+/* STOCK STATUS */
+.stock-badge {
+  display: inline-block;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.stock-available {
+  background: #d9f7e8;
+  color: #168653;
+}
+
+.stock-low {
+  background: #fff0ce;
+  color: #b7791f;
+}
+
+.stock-empty {
+  background: #ffe0e0;
+  color: #d63031;
+}
+
+/* REPORT */
+.report-item {
+  background: #f4f6fb;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.report-item span {
+  color: #777;
+  font-size: 13px;
+}
+
+.report-item h3 {
+  color: #405de6;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* FORM MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  z-index: 1000;
+}
+
+.task-modal {
+  background: white;
+  width: 100%;
+  max-width: 500px;
+  padding: 25px;
+  border-radius: 15px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.task-modal h4 {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .sidebar-subtitle {
+    margin-bottom: 10px;
+  }
+
+  .sidebar a {
+    display: inline-block;
+    margin: 3px;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .navbar-custom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .navbar-actions {
+    width: 100%;
+  }
+
+  .navbar-actions input {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .navbar-actions button {
+    white-space: nowrap;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
